@@ -181,9 +181,9 @@ correta, de acordo com os dados inseridos no objeto.
 pessoa.apresentacao = function(){
   var textoRetorno='';
   if(pessoa.sexo==='Feminino'){
-    textoRetorno='Olá, eu sou a ' + pessoa.nomeCompleto();
+    textoRetorno='Olá, eu sou a ' + pessoa.nome + ' ' + pessoa.sobrenome;
   }else{
-    textoRetorno='Olá, eu sou o ' + pessoa.nomeCompleto();
+    textoRetorno='Olá, eu sou o ' + pessoa.nome + ' ' + pessoa.sobrenome;
   }
   if(pessoa.idade===1){
     textoRetorno+=', tenho ' + pessoa.idade + ' ano, ';
@@ -200,5 +200,5 @@ pessoa.apresentacao = function(){
 }
 
 // Agora, apresente-se ;)
-pessoa.apresentacao() //"Olá, eu sou o Olá! Meu nome é Paulo Coimbra!, tenho 27 anos, 1.78, meu peso é 81 e, só hoje, eu ja caminhei 84 metros!"
+pessoa.apresentacao() //"Olá, eu sou o Paulo Coimbra!, tenho 27 anos, 1.78, meu peso é 81 e, só hoje, eu ja caminhei 84 metros!"
 ```
