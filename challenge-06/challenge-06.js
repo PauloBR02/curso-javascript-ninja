@@ -76,23 +76,19 @@ function convertToHex(cor) {
     switch(cor){
         case 'Vermelho':
             return texto + '#ff0000.';
-            break;
+            // break; não é necessário pois o return vai ignorar o break
 
         case 'Azul':
             return texto + '#0000ff.';
-            break;
 
         case 'Verde':
             return texto + '#00ff00.';
-            break;
 
         case 'Amarelo':
             return texto + '#ffff00.';
-            break;
 
         case 'Rosa':
             return texto + '#ff00ff.';
-            break;
 
         default:
             return 'Não temos o equivalente hexadecimal para ' + cor + '.';
