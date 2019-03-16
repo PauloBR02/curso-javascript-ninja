@@ -1,9 +1,7 @@
 (function(){
-	var myObject = {
-		myProperty: 1,
-		init: function init(){
-			return this;
-		}
-	};
-	console.log(myObject.init());
+	function myFunction(){
+		return arguments;
+	}
+	console.log(myFunction(1,2,3,4,5));
+
 })();
