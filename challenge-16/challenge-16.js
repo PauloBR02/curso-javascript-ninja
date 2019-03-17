@@ -36,12 +36,10 @@
 	console.log( '\nNome convertido à partir de um slug:' );
 	var fullName = 'paulo-matheus-coimbra';
 	console.log('slug = ' + fullName);
-	var nomes = fullName.split('-');
-	for (var i = 0; i < nomes.length; i++) {
-		var inicial = nomes[i].charAt(0).toUpperCase();
-		nomes[i] = inicial + nomes[i].slice(1);aaa
-	}
-	console.log('resultado final = ' + nomes.join(' '));
+	var newFullName = fullName.split('-').map(function(name){
+		return name.charAt(0).toUpperCase() + name.slice(1);
+	});
+	console.log('resultado final = ' + newFullName.join(' '));
 
 
 	/*
@@ -54,21 +52,28 @@
 	5 nomes foi somente uma sugestão ;)
 	*/
 	console.log( '\nMeus amigos:' );
-	// ?
+	var names = ['Paulo', 'Kel', 'Fernando', 'Jéssica', 'Daniel'];
+	var namesReduced = names.reduce(function(accumulated, actual, index, array){
+		if(array[index] === names.slice(-1).toString()){
+			return accumulated + ' e ' + actual + ' são meus amigos.';
+		}
+		return accumulated + ', ' + actual;
+	});
+	console.log(namesReduced);
 
 	/*
 	Usando o replace(), faça a string "Roberto" virar "Roberta".
 	Mostre o resultado no console.
 	*/
 	console.log( '\nEra "Roberto", agora é:' );
-	// ?
+	console.log('Roberto'.replace('to','ta'));
 
 	/*
 	Mostre no console a parte "nando" da string "Fernando". Use o método que
 	faz a busca do final para o início da string.
 	*/
 	console.log( '\nParte de uma string:' );
-	// ?
+	console.log('Fernando'.substring(8,3))
 
 	/*
 	Declare uma variável chamada `myName`, que receba o seu primeiro nome,
@@ -80,6 +85,13 @@
 	Ex.: Nomes que deveriam funcionar: "Fernando", "RoBertO", "gabriEla", etc.
 	*/
 	console.log( '\nNome com letras intercaladas entre caixa alta e baixa:' );
-	// ?
+	var myName = 'fernando';
+	var newName = '';
+	for ( var i = 0; i <= myName.length ; i++ ) {
+		i%2===0
+			? newName += myName.charAt(i).toUpperCase()	
+			: newName += myName.charAt(i).toLowerCase();
+	}
+	console.log(newName);
 
 })();
