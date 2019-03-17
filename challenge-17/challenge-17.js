@@ -29,7 +29,7 @@
 	Ex: Se você for da São Paulo, substitua por "paulista".
 	*/
 	console.log( '\nTrocando naturalidade:' );
-	newText = text.replace(/brasileiro/, 'paulista');
+	newText = text.replace(/brasileiro/g, 'campineiro');
 	console.log(newText);
 	/*
 	Substitua todos os números por um traço `-`. Cada caractere de número deve
@@ -60,7 +60,7 @@
 	o método `toUpperCase()`. Mostre o resultado no console:
 	*/
 	console.log( '\n"O Centauro de Luvas" em caixa alta:' );
-	newText = text.replace('O Centauro de Luvas', function(phrase){
+	newText = text.replace(/O Centauro de Luvas/g, function(phrase){
 		return phrase.toUpperCase();
 	});
 	console.log(newText);
@@ -79,7 +79,7 @@
 	*/
 	console.log( '\nMeses representados por números:' );
 	function getMonthNumber(month){
-		var meses = [
+		var months = [
 		'janeiro', 
 		'fevereiro', 
 		'março', 
@@ -93,10 +93,10 @@
 		'novembro',
 		'dezembro'
 		];
-		if ((meses.indexOf(month.toLowerCase())+1) < 10) {
-			return '0' + (meses.indexOf(month.toLowerCase())+1);
+		if ((months.indexOf(month.toLowerCase())+1) < 10) {
+			return '0' + (months.indexOf(month.toLowerCase())+1);
 		};
-		return (meses.indexOf(month.toLowerCase())+1).toString();
+		return (months.indexOf(month.toLowerCase())+1).toString();
 	};
 	console.log('O mês de março é representado pelo número ' + getMonthNumber('março') + '.');
 	console.log('O mês de setembro é representado pelo número ' + getMonthNumber('setembro') + '.');
