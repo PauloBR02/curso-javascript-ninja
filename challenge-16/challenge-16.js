@@ -39,7 +39,7 @@
 	var nomes = fullName.split('-');
 	for (var i = 0; i < nomes.length; i++) {
 		var inicial = nomes[i].charAt(0).toUpperCase();
-		nomes[i] = inicial + nomes[i].slice(1);
+		nomes[i] = inicial + nomes[i].slice(1);aaa
 	}
 	console.log('resultado final = ' + nomes.join(' '));
 
