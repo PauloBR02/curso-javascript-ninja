@@ -39,9 +39,10 @@
   */
   function sum(){
     console.log(arguments);
-    return Array.prototype.reduce.apply(arguments, [function(accumulated, actual, index){
-      return +accumulated + +actual;
-    }]);
+    return Array.prototype.reduce.call(arguments,
+      function(accumulated, actual){
+        return +accumulated + +actual;
+      });
   }
 
 
@@ -50,9 +51,9 @@
   diferentes, com quantidades variáveis de parâmetros passados.
   */
   console.log( '\nSomar alguns números:' );
-  console.log(sum([2,5,1,3,5,8]));
-  console.log(sum([5,3,6,3,8,6,9]));
-  console.log(sum([10,20,30,40,50,60,70,80,90,100]));
+  console.log(sum(2,5,1,3,5,8));
+  console.log(sum(5,3,6,3,8,6,9));
+  console.log(sum(10,20,30,40,50,60,70,80,90,100));
 
   /*
   Declare uma variável chamada `userEntry`, que irá receber alguns valores
@@ -74,9 +75,7 @@
   */
   console.log( '\nFunção que limpa entrada do usuário (somente números):' );
   function justNumbers(str){
-    return Array.prototype.filter.call(str, function(item){
-      return item.match(/\d/g);
-    });
+    return str.replace(/\D+/g, ',').split(',');
   };
   console.log(justNumbers('a1b2c3'));
   console.log(justNumbers.toString());
