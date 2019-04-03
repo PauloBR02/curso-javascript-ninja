@@ -70,6 +70,10 @@
     }
   }
 
+  function clearField(){
+    field.value = 0;
+  }
+
 
 
   var elements = doc.querySelectorAll( 'input[type="button"]' );
