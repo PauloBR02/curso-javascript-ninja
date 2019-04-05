@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Challenge-25</title>
+</head>
+<body>
+  <div id="main">
+    <span>Test input Focus/Blur</span>
+    <input type="text" id="inputFocusBlur">
+    <br><br>
+
+    <span>Test form Reset/Submit</span><br>
+    <form data-js="formReset">
+      <input type="text" value="1">
+      <input type="text" value="2">
+      <input type="text" value="3">
+      <input type="reset" name="">
+      <input type="submit" name="">
+    </form>
+    <br>
+    <span>Test print</span><br>
+    <span data-js="spanPrint"></span>
+
+    <br>
+    <span>Test clipboard</span><br>
+    <input type="text" data-js="inputClipboard">
+    <span data-js="spanClipboard"></span>
+
+    <br>
+    <span>Test keyboard</span><br>
+    <input type="text" data-js="inputKeyboard">
+    <span data-js="spanKeyboard"></span>
+
+    <br>
+    <span>Test mouseclick - a cada click um novo div é criado</span>
+    <input type="button" data-js="buttonMouse"><br>
+    <div data-js="divMouse">
+
+    </div>
+
+  </div>
+  <script type="text/javascript" src="challenge-25.js"></script>
+</body>
+</html>
